@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import "../styles/globals.css";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import Metadata from "@/components/Metadata";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -15,9 +16,12 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={`${ibmPlexMono.variable} ${ibmPlexSans.variable}`}>
-      <Component {...pageProps} />
-    </div>
+    <>
+      <Metadata />
+      <div className={`${ibmPlexMono.variable} ${ibmPlexSans.variable}`}>
+        <Component {...pageProps} />
+      </div>
+    </>
   );
 }
 

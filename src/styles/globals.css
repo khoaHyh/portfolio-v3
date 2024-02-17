@@ -4,8 +4,14 @@
 @tailwind utilities;
 
 :root {
-  /* peach blossom theme from monkeytype */
+  /* Peach Blossom theme from monkeytype */
   --color-background: #292929;
   --color-primary: #99b898;
   --color-primary-text: #fecea8;
+  --color-secondary: #616161;
+  --color-secondary-alt: #2a363b;
+  /* Additional options for body text */
+  --color-body-light-slate-gray: #8a8a8a;
+  --color-body-pastel-green: #77a8a8;
+  --color-pink-soft: #f3c1c6;
 }

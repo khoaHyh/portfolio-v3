@@ -10,9 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Main theme colors
         background: "var(--color-background)",
         primary: "var(--color-primary)",
         primaryText: "var(--color-primary-text)",
+        secondary: "var(--color-secondary)",
+        secondaryAlt: "var(--color-secondary-alt)",
+        // Additional body text color options
+        bodyLightSlateGray: "var(--color-body-light-slate-gray)",
+        bodyPastelGreen: "var(--color-body-pastel-green)",
+        pinkSoft: "var(--color-pink-soft)",
       },
       fontFamily: {
         sans: ["var(--font-ibmPlexSans)", ...defaultTheme.fontFamily.sans],

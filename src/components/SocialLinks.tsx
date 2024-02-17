@@ -1,5 +1,5 @@
 const iconHover =
-  "block transform transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:text-slate-200";
+  "block transform transition-transform duration-200 ease-in-out hover:-translate-y-2 hover:text-secondary";
 
 export default function SocialLinks(): JSX.Element {
   return (
