@@ -1,17 +1,22 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{html,js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{html,js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{html,js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        background: "var(--color-background)",
+        primary: "var(--color-primary)",
+        primaryText: "var(--color-primary-text)",
+      },
+      fontFamily: {
+        sans: ["var(--font-ibmPlexSans)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-ibmPlexMono)", ...defaultTheme.fontFamily.mono],
       },
     },
   },
