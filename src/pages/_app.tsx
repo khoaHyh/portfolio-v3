@@ -14,11 +14,16 @@ const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibmPlexSans",
 });
 
+const pageStyle =
+  "bg-background text-primaryText font-mono w-full min-h-screen";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Metadata />
-      <div className={`${ibmPlexMono.variable} ${ibmPlexSans.variable}`}>
+      <div
+        className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${pageStyle}`}
+      >
         <Component {...pageProps} />
       </div>
     </>
