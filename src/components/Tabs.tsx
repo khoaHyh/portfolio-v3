@@ -39,7 +39,7 @@ export default function Tabs({ tabs }: TabsProps): JSX.Element {
           ))}
         </ul>
       </div>
-      <div id="tab-content" className="mt-4 text-bodyLightSlateGray">
+      <div id="tab-content" className="mt-6 text-bodyLightSlateGray">
         {activeTab != null && tabs[activeTab]}
       </div>
     </>

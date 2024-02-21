@@ -6,6 +6,7 @@
 :root {
   /* Peach Blossom theme from monkeytype */
   --color-background: #292929;
+  --color-light-background: #3e3e3e;
   --color-primary: #99b898;
   --color-primary-text: #fecea8;
   --color-secondary: #616161;
