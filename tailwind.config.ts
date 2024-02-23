@@ -19,7 +19,6 @@ const config: Config = {
         secondaryAlt: "var(--color-secondary-alt)",
         // Additional body text color options
         bodyLightSlateGray: "var(--color-body-light-slate-gray)",
-        bodyPastelGreen: "var(--color-body-pastel-green)",
         pinkSoft: "var(--color-pink-soft)",
       },
       fontFamily: {

@@ -6,13 +6,12 @@
 :root {
   /* Peach Blossom theme from monkeytype */
   --color-background: #292929;
-  --color-light-background: #3e3e3e;
   --color-primary: #99b898;
   --color-primary-text: #fecea8;
   --color-secondary: #616161;
   --color-secondary-alt: #2a363b;
-  /* Additional options for body text */
+  /* Additional complimentary colors from ChatGPT */
+  --color-light-background: #3e3e3e;
   --color-body-light-slate-gray: #8a8a8a;
-  --color-body-pastel-green: #77a8a8;
   --color-pink-soft: #f3c1c6;
 }

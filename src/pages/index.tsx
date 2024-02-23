@@ -1,27 +1,9 @@
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks, { GithubLink } from "@/components/SocialLinks";
 import Tabs, { TabContent } from "@/components/Tabs";
 import Tags from "@/components/Tags";
+import { experiences, projects } from "@/constants/content";
 import Image from "next/image";
-import React, { ReactNode } from "react";
-
-type Experience = {
-  company: string;
-  positions: {
-    title: string;
-    tenure?: string;
-    customNode?: ReactNode;
-  }[];
-  description: string;
-  tags: string[];
-};
-
-type Project = {
-  title: string;
-  description: string;
-  linkAlt: string;
-  imageAlt: string;
-  tags: string[];
-};
+import React from "react";
 
 export default function Home() {
   // TODO: look into these later, just scaffolding.
@@ -31,68 +13,8 @@ export default function Home() {
   const headerContainer =
     "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-start lg:py-24";
   const contentContainer = "pt-24 lg:w-1/2 lg:py-24";
-
-  const experiences: Experience[] = [
-    {
-      company: "Touchbistro",
-      positions: [
-        {
-          title: "Full Stack Software Developer I",
-          tenure: "May 2021 — July 2022",
-          customNode: (
-            <>
-              Full Stack Software Developer{" "}
-              {/* Render the I character without the top and bottom horizontal lines */}
-              <span className="font-[sans-serif] font-medium">I</span>
-            </>
-          ),
-        },
-        {
-          title: "Full Stack Software Developer II",
-          tenure: "July 2022 — present",
-          customNode: (
-            <>
-              Full Stack Software Developer{" "}
-              {/* Render the II characters without the top and bottom horizontal lines */}
-              <span className="font-[sans-serif] font-medium">II</span>
-            </>
-          ),
-        },
-      ],
-      description:
-        "Working on a dynamic team, we are building TouchBistro's latest innovation: RMM3 (Remote Menu Management 3.0). This cloud-first solution revolutionizes how menus are integrated with the POS system, offering seamless cloud synchronization. From the initial stages of development to launching the beta version, our team has meticulously built, styled, and deployed various features. We're currently migrating existing customers to this advanced system, with a special emphasis on accommodating multi-venue clients.",
-      tags: [
-        "JavaScript",
-        "TypeScript",
-        "Node.js",
-        "PostgreSQL",
-        "React",
-        "Next.js",
-        "Docker",
-        "CircleCI",
-      ],
-    },
-  ];
-
-  const projects: Project[] = [
-    {
-      title: "Twitter clone API",
-      description:
-        "Developed an API that mocks some of the features that Twitter provides. API Features include: authentication, direct messages, tweets, retweets, likes, and threads. Utilized Mocha/Chai for automated tests and Insomnia (Postman-alternative) for manual testing.",
-      linkAlt: "Github page for Twitter clone API (opens in a new tab)",
-      imageAlt:
-        "Screnshot of Insomnia and terminal setup for testing Twitter clone API",
-      tags: [
-        "JavaScript",
-        "MongoDB",
-        "Express",
-        "Node.js",
-        "Mocha",
-        "Chai",
-        "Passport.js",
-      ],
-    },
-  ];
+  const projectGithubIcon =
+    "text-primaryText hover:text-secondary focus-visible:text-secondary relative mt-2 inline-flex items-center text-sm font-medium";
 
   const tabContent: TabContent = {
     About: (
@@ -132,44 +54,99 @@ export default function Home() {
       </ul>
     ),
     Projects: (
-      <ul className="group/list">
-        {projects.map(({ title, description, linkAlt, imageAlt, tags }) => (
-          <li key={title} className="mb-12">
-            <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-              <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-lightBackground lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-              <div className="z-10 sm:order-2 sm:col-span-6">
-                <h3>
-                  <a
-                    className="font-medium text-base text-primaryText inline-flex items-baseline leading-tight hover:text-primary focus-visible:text-primary group/link"
-                    rel="noreferrer noopener"
-                    href="https://github.com/khoaHyh/twitter-clone-api"
-                    aria-label={linkAlt}
-                    target="_blank"
-                  >
-                    <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                    <span>{title}</span>
-                  </a>
-                </h3>
-                <p className="font-sans text-sm mt-2 leading-normal">
-                  {description}
-                </p>
-                <Tags tags={tags} />
-              </div>
-              <Image
-                className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                alt={imageAlt}
-                src="https://raw.githubusercontent.com/khoaHyh/twitter-clone-api/master/assets/twitter-clone-api_ss.png"
-                loading="lazy"
-                width={200}
-                height={48}
-                decoding="async"
-              />
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <ul className="group/list">
+          {projects.map(
+            ({
+              title,
+              description,
+              githubLink,
+              githubLinkAlt,
+              image,
+              imageAlt,
+              tags,
+              appLink,
+              appLinkAlt,
+            }) => (
+              <li key={title} className="mb-12">
+                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-lightBackground lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                  <div className="z-10 sm:order-2 sm:col-span-6">
+                    <h3>
+                      <a
+                        className="font-medium text-base text-primaryText inline-flex items-baseline leading-tight hover:text-primary focus-visible:text-primary group/link"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        href={appLink ?? githubLink}
+                        aria-label={appLinkAlt ?? githubLinkAlt}
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                        <span>{title}</span>
+                      </a>
+                    </h3>
+                    <p className="font-sans text-sm mt-2 leading-normal">
+                      {description}
+                    </p>
+                    {appLink != null && (
+                      <GithubLink
+                        iconStyle={projectGithubIcon}
+                        href={githubLink}
+                        ariaLabel={githubLinkAlt}
+                      />
+                    )}
+                    <Tags tags={tags} />
+                  </div>
+                  <Image
+                    className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                    alt={imageAlt}
+                    src={image}
+                    loading="lazy"
+                    width={200}
+                    height={48}
+                    decoding="async"
+                  />
+                </div>
+              </li>
+            )
+          )}
+        </ul>
+        <div className="mt-12">
+          <a
+            className="inline-flex items-center leading-tight text-primaryText font-semibold group"
+            aria-label="View More Projects on Github"
+            href="https://github.com/khoaHyh?tab=repositories"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <span>
+              <span className="border-b border-transparent pb-px transition group-hover:border-pinkSoft motion-reduce:transition-none">
+                View More Projects on{" "}
+              </span>
+              <span className="whitespace-nowrap">
+                <span className="border-b border-transparent pb-px transition group-hover:border-pinkSoft motion-reduce:transition-none">
+                  Github
+                </span>
+                <svg
+                  className="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden={true}
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
     ),
-    "Learning Resources": <>resources</>,
+    // TODO: fill in resources from journey
+    // "Learning Resources": <>resources</>,
   };
 
   return (
