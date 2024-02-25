@@ -8,6 +8,18 @@ const nextConfig = {
         port: "",
         pathname: "/khoaHyh/twitter-clone-api/master/assets/**",
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/mochajs/mocha/**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/knex/documentation/**",
+      },
     ],
   },
 };

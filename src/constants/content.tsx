@@ -1,7 +1,8 @@
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import pomodomoPic from "../assets/pomodomo.png";
-import chakraChatPic from "../assets/chakra_chat.png";
+
+const pomodomoPic = "/pomodomo.png";
+const chakraChatPic = "/chakra_chat.png";
 
 type Experience = {
   company: string;
@@ -25,6 +26,25 @@ type Project = {
   appLink?: string;
   appLinkAlt?: string;
 };
+
+type OpenSourceContribution = {
+  title: string;
+  description: string;
+  pullRequestLink: string;
+  pullRequestLinkAlt: string;
+  image: string | StaticImageData;
+  imageAlt: string;
+  tags: string[];
+};
+
+export function AboutSection(): JSX.Element {
+  return (
+    <div className="font-sans">
+      <p className="mb-4">{`In late 2019, inspired as a pedicab driver, I aimed to start my own business and realized a website was crucial. Diving into self-education through Udemy, my journey took a turn when the pandemic hit, leading me to discover a passion for coding. After a year and a half of immersing myself in online resources like blogs, YouTube, Coursera, and FreeCodeCamp, I joined TouchBistro. Today, I contribute to TouchBistro's Remote Menu Management solution, focusing on expanding to Multi-Venue customers.`}</p>
+      <p className="mb-4">{`Outside of work, I'm into Brazilian jiu-jitsu, street dance, my Steam library, and hacking on whatever piques my interest.`}</p>
+    </div>
+  );
+}
 
 export const experiences: Experience[] = [
   {
@@ -54,7 +74,7 @@ export const experiences: Experience[] = [
       },
     ],
     description:
-      "Working on a dynamic team, we are building TouchBistro's latest innovation: RMM3 (Remote Menu Management 3.0). This cloud-first solution revolutionizes how menus are integrated with the POS system, offering seamless cloud synchronization. From the initial stages of development to launching the beta version, our team has meticulously built, styled, and deployed various features. We're currently migrating existing customers to this advanced system, with a special emphasis on accommodating multi-venue clients.",
+      "Working on a dynamic team, I've been contributing to TouchBistro's newest version of Remote Menu Management. This cloud-first solution revolutionizes how menus are integrated with the POS system, offering seamless cloud synchronization. From the initial stages of development to launching the beta version, our team has meticulously built, styled, and deployed various features. We're currently migrating existing customers to this advanced system, with a special emphasis on accommodating multi-venue clients.",
     tags: [
       "JavaScript",
       "TypeScript",
@@ -126,5 +146,34 @@ export const projects: Project[] = [
       "Passport.js",
       "Chakra UI",
     ],
+  },
+];
+
+export const openSourceContributions: OpenSourceContribution[] = [
+  {
+    title: "Mocha",
+    description:
+      "☕️ simple, flexible, fun javascript test framework for node.js & the browser",
+    pullRequestLink:
+      "https://github.com/mochajs/mocha/pulls?q=is%3Apr+author%3AkhoaHyh+",
+    pullRequestLinkAlt:
+      "Pull Requests by khoaHyh in the Mocha repository (opens in a new tab)",
+    image:
+      "https://raw.githubusercontent.com/mochajs/mocha/master/assets/mocha-logo.svg",
+    imageAlt: "Mocha logo",
+    tags: ["JavaScript", "Testing", "CLI"],
+  },
+  {
+    title: "Knex",
+    description:
+      "A query builder for PostgreSQL, MySQL, CockroachDB, SQL Server, SQLite3 and Oracle, designed to be flexible, portable, and fun to use. ",
+    pullRequestLink:
+      "https://github.com/knex/documentation/pulls?q=is%3Apr+author%3AkhoaHyh",
+    pullRequestLinkAlt:
+      "Pull Requests by khoaHyh in the Knex repository (opens in a new tab)",
+    image:
+      "https://raw.githubusercontent.com/knex/documentation/main/src/public/knex-logo.png",
+    imageAlt: "Knex logo",
+    tags: ["SQL", "ORM", "Documentation"],
   },
 ];

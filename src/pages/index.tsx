@@ -1,12 +1,16 @@
 import SocialLinks, { GithubLink } from "@/components/SocialLinks";
 import Tabs, { TabContent } from "@/components/Tabs";
 import Tags from "@/components/Tags";
-import { experiences, projects } from "@/constants/content";
+import {
+  AboutSection,
+  experiences,
+  openSourceContributions,
+  projects,
+} from "@/constants/content";
 import Image from "next/image";
 import React from "react";
 
 export default function Home() {
-  // TODO: look into these later, just scaffolding.
   const outerContainer =
     "mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0";
   const subContainer = "lg:flex lg:justify-between lg:gap-4";
@@ -17,12 +21,7 @@ export default function Home() {
     "text-primaryText hover:text-secondary focus-visible:text-secondary relative mt-2 inline-flex items-center text-sm font-medium";
 
   const tabContent: TabContent = {
-    About: (
-      <div className="font-sans">
-        <p className="mb-4">{`In late 2019, inspired as a pedicab driver, I aimed to start my own business and realized a website was crucial. Diving into self-education through Udemy, my journey took a turn when the pandemic hit, leading me to discover a passion for coding. After a year and a half of immersing myself in online resources like blogs, YouTube, Coursera, and FreeCodeCamp, I joined TouchBistro. Today, I contribute to TouchBistro's Remote Menu Management solution, focusing on expanding to Multi-Venue customers.`}</p>
-        <p className="mb-4">{`Outside of work, I'm into Brazilian jiu-jitsu, street dance, my Steam library, and hacking on whatever piques my interest.`}</p>
-      </div>
-    ),
+    About: <AboutSection />,
     Experience: (
       <ul>
         {experiences.map(({ company, positions, description, tags }) => (
@@ -143,6 +142,57 @@ export default function Home() {
             </span>
           </a>
         </div>
+      </div>
+    ),
+    "Open Source": (
+      <div>
+        <p className="font-sans mb-8">{`Here are some open source projects that I've been contributing to:`}</p>
+        <ul className="group/list">
+          {openSourceContributions.map(
+            ({
+              title,
+              description,
+              pullRequestLink,
+              pullRequestLinkAlt,
+              image,
+              imageAlt,
+              tags,
+            }) => (
+              <li key={title} className="mb-12">
+                <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                  <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-lightBackground lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                  <div className="z-10 sm:order-2 sm:col-span-6">
+                    <h3>
+                      <a
+                        className="font-medium text-base text-primaryText inline-flex items-baseline leading-tight hover:text-primary focus-visible:text-primary group/link"
+                        rel="noreferrer noopener"
+                        target="_blank"
+                        href={pullRequestLink}
+                        aria-label={pullRequestLinkAlt}
+                      >
+                        <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                        <span>{title}</span>
+                      </a>
+                    </h3>
+                    <p className="font-sans text-sm mt-2 leading-normal">
+                      {description}
+                    </p>
+                    <Tags tags={tags} />
+                  </div>
+                  <Image
+                    className="transition sm:order-1 sm:col-span-2 sm:translate-y-1"
+                    alt={imageAlt}
+                    src={image}
+                    loading="lazy"
+                    width={200}
+                    height={48}
+                    decoding="async"
+                  />
+                </div>
+              </li>
+            )
+          )}
+        </ul>
       </div>
     ),
     // TODO: fill in resources from journey
