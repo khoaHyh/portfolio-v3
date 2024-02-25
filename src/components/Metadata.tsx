@@ -16,9 +16,9 @@ export default function Metadata(): JSX.Element {
       <meta
         property="og:image"
         // TODO: get screenshot of site and use URL here
-        content="URL_to_image_that_represents_your_site"
+        content=""
       />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content="/portfolio_screenshot.png" />
     </Head>
   );
 }
