@@ -11,6 +11,8 @@ export default function Metadata(): JSX.Element {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#fecea8" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       {/* Other meta tags for SEO */}
       <meta property="og:title" content="Khoa Huynh" />
       <meta property="og:description" content={description} />
@@ -23,7 +25,6 @@ export default function Metadata(): JSX.Element {
         property="twitter:image"
         content="https://raw.githubusercontent.com/khoaHyh/portfolio-v3/main/public/portfolio_screenshot.png"
       />
-      <link rel="icon" href="/favicon.ico" sizes="any" />
     </Head>
   );
 }
