@@ -13,12 +13,16 @@ export default function Metadata(): JSX.Element {
       {/* Other meta tags for SEO */}
       <meta property="og:title" content="Khoa Huynh" />
       <meta property="og:description" content={description} />
+      <meta property="og:type" content="portfolio" />
       <meta
         property="og:image"
-        // TODO: get screenshot of site and use URL here
-        content=""
+        content="https://raw.githubusercontent.com/khoaHyh/portfolio-v3/main/public/portfolio_screenshot.png"
       />
-      <meta property="og:type" content="/portfolio_screenshot.png" />
+      <meta
+        property="twitter:image"
+        content="https://raw.githubusercontent.com/khoaHyh/portfolio-v3/main/public/portfolio_screenshot.png"
+      />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
     </Head>
   );
 }
