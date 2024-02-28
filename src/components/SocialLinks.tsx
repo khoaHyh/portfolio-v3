@@ -34,7 +34,7 @@ export function GithubLink({
 
 export default function SocialLinks(): JSX.Element {
   return (
-    <ul className="ml-1 mt-8 flex items-center">
+    <ul className="ml-1 mt-4 flex items-center">
       <li className="mr-5 text-xs shrink-0">
         <GithubLink
           href="https://github.com/khoaHyh"

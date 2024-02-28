@@ -210,10 +210,10 @@ export default function Home() {
               <h1 className="text-4xl tracking-tight sm:text-5xl font-extrabold">
                 Khoa Huynh
               </h1>
-              <h2 className="mt-3 text-lg text-primary font-sans font-medium tracking-tight sm:text-xl">
+              <h2 className="mt-2 text-lg text-primary font-sans font-medium tracking-tight sm:text-xl">
                 Full Stack Software Developer at TouchBistro
               </h2>
-              <p className="font-sans mt-4 max-w-xs leading-normal text-bodyLightSlateGray">
+              <p className="font-sans mt-2 max-w-xs leading-normal text-bodyLightSlateGray">
                 Working with great people to build great products 🛠️
               </p>
             </>

@@ -10,6 +10,7 @@ export default function Metadata(): JSX.Element {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#fecea8" />
       {/* Other meta tags for SEO */}
       <meta property="og:title" content="Khoa Huynh" />
       <meta property="og:description" content={description} />

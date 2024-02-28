@@ -1,0 +1,20 @@
+{
+  "name": "Khoa Huynh | khoaHyh",
+  "short_name": "Khoa Huynh",
+  "description": "Portfolio site for Khoa Huynh",
+  "start_url": "/",
+  "background_color": "#292929",
+  "theme_color": "#fecea8",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
