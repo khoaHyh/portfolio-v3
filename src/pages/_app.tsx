@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import "../styles/globals.css";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import Metadata from "@/components/Metadata";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Metadata />
+      <SpeedInsights />
       <div
         className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${pageStyle}`}
       >
