@@ -15,10 +15,12 @@ export default function Home() {
     "mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0";
   const subContainer = "lg:flex lg:justify-between lg:gap-4";
   const headerContainer =
-    "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-start lg:py-24";
-  const contentContainer = "pt-24 lg:w-1/2 lg:py-24";
+    "lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24";
+  const contentContainer = "pt-20 lg:w-1/2 lg:py-24";
   const projectGithubIcon =
     "text-primaryText hover:text-secondary focus-visible:text-secondary relative mt-2 inline-flex items-center text-sm font-medium";
+  const footerLink =
+    "font-medium text-primaryText hover:text-primary focus-visible:text-primary";
 
   const tabContent: TabContent = {
     About: <AboutSection />,
@@ -216,10 +218,44 @@ export default function Home() {
               </p>
             </>
             <SocialLinks />
+            <footer className="max-w-md text-secondary text-xs sm:pb-0 pt-4">
+              <p>
+                Built with{" "}
+                <a
+                  className={footerLink}
+                  href="https://nextjs.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Next.js (opens in a new tab)"
+                >
+                  Next.js
+                </a>{" "}
+                and{" "}
+                <a
+                  className={footerLink}
+                  href="https://tailwindcss.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Tailwind CSS (opens in a new tab)"
+                >
+                  Tailwind CSS
+                </a>
+                . Developed by myself and design adapted from{" "}
+                <a
+                  className={footerLink}
+                  href="https://brittanychiang.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Brittany Chiang's site (opens in a new tab)"
+                >
+                  brittanychiang.com
+                </a>
+              </p>
+            </footer>
           </header>
-          <div id="content" className={contentContainer}>
+          <main id="content" className={contentContainer}>
             <Tabs tabs={tabContent} />
-          </div>
+          </main>
         </div>
       </div>
     </>
