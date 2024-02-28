@@ -3,6 +3,7 @@
   "short_name": "Khoa Huynh",
   "description": "Portfolio site for Khoa Huynh",
   "start_url": "/",
+  "display:": "minimal-ui",
   "background_color": "#292929",
   "theme_color": "#fecea8",
   "icons": [
