@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 
 const pomodomoPic = "/pomodomo.png";
 const chakraChatPic = "/chakra_chat.png";
+const fastHtmlPic = "/fasthtml.svg";
 
 type Experience = {
   company: string;
@@ -171,7 +172,7 @@ export const openSourceContributions: OpenSourceContribution[] = [
       "https://github.com/AnswerDotAI/fasthtml/pulls?q=is%3Apr+author%3AkhoaHyh+",
     pullRequestLinkAlt:
       "Pull Requests by khoaHyh in the FastHTML repository (opens in a new tab)",
-    image: "https://avatars.githubusercontent.com/u/156509747?s=200&v=4",
+    image: fastHtmlPic,
     imageAlt: "AnswerDotAI/FastHTML logo",
     tags: ["Python", "Jupyter Notebook", "Web Framework", "Documentation"],
   },
