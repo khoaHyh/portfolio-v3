@@ -108,7 +108,7 @@ export default function Home() {
                   />
                 </div>
               </li>
-            )
+            ),
           )}
         </ul>
         <div className="mt-12">
@@ -192,7 +192,7 @@ export default function Home() {
                   />
                 </div>
               </li>
-            )
+            ),
           )}
         </ul>
       </div>

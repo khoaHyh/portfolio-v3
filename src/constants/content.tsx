@@ -164,16 +164,15 @@ export const openSourceContributions: OpenSourceContribution[] = [
     tags: ["JavaScript", "Testing", "CLI"],
   },
   {
-    title: "Knex",
+    title: "FastHTML",
     description:
-      "A query builder for PostgreSQL, MySQL, CockroachDB, SQL Server, SQLite3 and Oracle, designed to be flexible, portable, and fun to use. ",
+      "A new next-generation Python web framework for fast, scalable web applications with minimal, compact code",
     pullRequestLink:
-      "https://github.com/knex/documentation/pulls?q=is%3Apr+author%3AkhoaHyh",
+      "https://github.com/AnswerDotAI/fasthtml/pulls?q=is%3Apr+author%3AkhoaHyh+",
     pullRequestLinkAlt:
-      "Pull Requests by khoaHyh in the Knex repository (opens in a new tab)",
-    image:
-      "https://raw.githubusercontent.com/knex/documentation/main/src/public/knex-logo.png",
-    imageAlt: "Knex logo",
-    tags: ["SQL", "ORM", "Documentation"],
+      "Pull Requests by khoaHyh in the FastHTML repository (opens in a new tab)",
+    image: "https://avatars.githubusercontent.com/u/156509747?s=200&v=4",
+    imageAlt: "AnswerDotAI/FastHTML logo",
+    tags: ["Python", "Jupyter Notebook", "Web Framework", "Documentation"],
   },
 ];
