@@ -219,38 +219,7 @@ export default function Home() {
             </>
             <SocialLinks />
             <footer className="max-w-md text-secondary text-xs sm:pb-0 pt-4">
-              <p>
-                Built with{" "}
-                <a
-                  className={footerLink}
-                  href="https://nextjs.org/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Next.js (opens in a new tab)"
-                >
-                  Next.js
-                </a>{" "}
-                and{" "}
-                <a
-                  className={footerLink}
-                  href="https://tailwindcss.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Tailwind CSS (opens in a new tab)"
-                >
-                  Tailwind CSS
-                </a>
-                . Developed by myself and design adapted from{" "}
-                <a
-                  className={footerLink}
-                  href="https://brittanychiang.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label="Brittany Chiang's site (opens in a new tab)"
-                >
-                  brittanychiang.com
-                </a>
-              </p>
+              <p>Built with 🫶</p>
             </footer>
           </header>
           <main id="content" className={contentContainer}>
