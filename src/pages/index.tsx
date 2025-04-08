@@ -98,10 +98,10 @@ export default function Home() {
                     <Tags tags={tags} />
                   </div>
                   <Image
+                    priority
                     className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
                     alt={imageAlt}
                     src={image}
-                    loading="lazy"
                     width={200}
                     height={48}
                     decoding="async"
@@ -182,10 +182,10 @@ export default function Home() {
                     <Tags tags={tags} />
                   </div>
                   <Image
+                    priority
                     className="transition sm:order-1 sm:col-span-2 sm:translate-y-1"
                     alt={imageAlt}
                     src={image}
-                    loading="lazy"
                     width={200}
                     height={48}
                     decoding="async"
