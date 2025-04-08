@@ -42,7 +42,7 @@ type OpenSourceContribution = {
 export function AboutSection(): JSX.Element {
   return (
     <div className="font-sans">
-      <p className="mb-4">{`In late 2019, inspired as a pedicab driver, I aimed to start my own business and realized a website was crucial. Diving into self-education through Udemy, my journey took a turn when the pandemic hit, leading me to discover a passion for coding. After a year and a half of immersing myself in online resources like blogs, YouTube, Coursera, and FreeCodeCamp, I joined TouchBistro. Today, I contribute to TouchBistro's Remote Menu Management solution, focusing on expanding to Multi-Venue customers.`}</p>
+      <p className="mb-4">{`In late 2019, inspired as a pedicab driver, I aimed to start my own business and realized a website was crucial. Diving into self-education through Udemy, my journey took a turn when the pandemic hit, leading me to discover a passion for coding. After a year and a half of immersing myself in online resources like blogs, YouTube, Coursera, and FreeCodeCamp, I joined TouchBistro. Today, I'm apart of TouchBistro's Developer Acceleration team, focusing on enabling developers to deploy frequently and safely.`}</p>
       <p className="mb-4">{`Outside of work, I'm into Brazilian jiu-jitsu, street dance, my Steam library, and hacking on whatever piques my interest.`}</p>
     </div>
   );
@@ -76,7 +76,7 @@ export const experiences: Experience[] = [
       },
     ],
     description:
-      "Working on a dynamic team, I've been contributing to TouchBistro's newest version of Remote Menu Management. This cloud-first solution revolutionizes how menus are integrated with the POS system, offering seamless cloud synchronization. From the initial stages of development to launching the beta version, our team has meticulously built, styled, and deployed various features. We're currently migrating existing customers to this advanced system, with a special emphasis on accommodating multi-venue clients.",
+      "Currently working on the Developer Acceleration team which is dedicated to tooling, automation and developer enablement. I get to be responsible for things like CI/CD, dev tools & environment, best practices, and more. Previously, I was on the Menu & Staff Management team where I got to take part in shipping new features for our web app that is integrated with a POS and migrating customers from our legacy product to our new cloud-first one.",
     tags: [
       "JavaScript",
       "TypeScript",
@@ -86,6 +86,8 @@ export const experiences: Experience[] = [
       "Next.js",
       "Docker",
       "CircleCI",
+      "Go",
+      "AWS",
     ],
   },
 ];
