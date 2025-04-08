@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 const pomodomoPic = "/pomodomo.png";
 const chakraChatPic = "/chakra_chat.png";
 const fastHtmlPic = "/fasthtml.svg";
+const sonicsightPic = "/sonicsight.png";
 
 type Experience = {
   company: string;
@@ -90,6 +91,27 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "SonicSight",
+    description:
+      "A web application that transforms audio files into spectrograms and uses deep learning to classify sounds. Currently specialized in distinguishing between cat and dog sounds, it leverages a model I trained on Kaggle, deployed on Hugging Face with a FastHTML frontend.",
+    githubLink: "https://github.com/khoaHyh/sonicsight",
+    githubLinkAlt: "Github page for SonicSight (opens in a new tab)",
+    image: sonicsightPic,
+    imageAlt:
+      "Screenshot of SonicSight web application showing spectrogram visualization of an audio file with classification results",
+    tags: [
+      "Python",
+      "FastHTML",
+      "fast.ai",
+      "Audio Processing",
+      "Spectrograms",
+      "Gradio",
+      "Deep Learning",
+      "Hugging Face",
+      "Kaggle",
+    ],
+  },
   {
     title: "Twitter clone API",
     description:
