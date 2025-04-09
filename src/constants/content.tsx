@@ -99,6 +99,8 @@ export const projects: Project[] = [
       "A web application that transforms audio files into spectrograms and uses deep learning to classify sounds. Currently specialized in distinguishing between cat and dog sounds, it leverages a model I trained on Kaggle, deployed on Hugging Face with a FastHTML frontend.",
     githubLink: "https://github.com/khoaHyh/sonicsight",
     githubLinkAlt: "Github page for SonicSight (opens in a new tab)",
+    appLink: "https://sonicsight.dev/",
+    appLinkAlt: "Sonicsight app page (opens in a new tab)",
     image: sonicsightPic,
     imageAlt:
       "Screenshot of SonicSight web application showing spectrogram visualization of an audio file with classification results",
