@@ -5,6 +5,7 @@ const pomodomoPic = "/pomodomo.png";
 const chakraChatPic = "/chakra_chat.png";
 const fastHtmlPic = "/fasthtml.svg";
 const sonicsightPic = "/sonicsight.png";
+const launchDarklyPic = "/launchdarkly.png";
 
 type Experience = {
   company: string;
@@ -201,5 +202,16 @@ export const openSourceContributions: OpenSourceContribution[] = [
     image: fastHtmlPic,
     imageAlt: "AnswerDotAI/FastHTML logo",
     tags: ["Python", "Jupyter Notebook", "Web Framework", "Documentation"],
+  },
+  {
+    title: "LaunchDarkly/ld-find-code-refs",
+    description: "Command line program for generating flag code references",
+    pullRequestLink:
+      "https://github.com/launchdarkly/ld-find-code-refs/pulls?q=is%3Apr+is%3Aclosed+author%3AkhoaHyh",
+    pullRequestLinkAlt:
+      "Pull Requests by khoaHyh in the LaunchDarkly/ld-find-code-refs repository (opens in a new tab)",
+    image: launchDarklyPic,
+    imageAlt: "LaunchDarkly logo",
+    tags: ["Go", "Feature Flags", "CLI"],
   },
 ];
